@@ -9,7 +9,7 @@ const pains = [
   "リピーターが増えず新規集客コストが高い",
 ];
 const fixes = [
-  "前日・当日にLINEで自動リマインド送信",
+  "前日・当日にSMS・メールで自動リマインド送信",
   "24時間ネット予約で電話対応を大幅削減",
   "予約・顧客情報をクラウドで一元管理",
   "来店履歴をもとに自動フォローDM送信",
@@ -17,7 +17,7 @@ const fixes = [
 
 export default function Problem() {
   return (
-    <section id="problem" className="py-24 px-6 bg-white">
+    <section id="problem" className="py-14 px-6 bg-white">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
