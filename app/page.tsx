@@ -1,4 +1,5 @@
 import Navbar        from "@/components/layout/Navbar";
+import DemoBanner    from "@/components/layout/DemoBanner";
 import Footer        from "@/components/layout/Footer";
 import Hero          from "@/components/sections/Hero";
 import RecommendedFor from "@/components/sections/RecommendedFor";
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <div className="relative bg-white min-h-screen">
       <Navbar />
+      <DemoBanner />
       <main>
         <Hero />
         <RecommendedFor />

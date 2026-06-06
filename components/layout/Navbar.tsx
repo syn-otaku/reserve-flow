@@ -49,7 +49,11 @@ export default function Navbar() {
           <Link href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors px-2">
             ログイン
           </Link>
-          <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 rounded-xl shadow-sm transition-all hover:shadow-md">
+          <Button
+            size="sm"
+            onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 rounded-xl shadow-sm transition-all hover:shadow-md"
+          >
             無料で始める
           </Button>
         </div>

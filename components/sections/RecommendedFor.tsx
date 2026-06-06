@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Scissors, UtensilsCrossed, Heart, Stethoscope } from "lucide-react";
 
-const shops = [
+const mainShops = [
   {
     icon: Scissors,
     type: "美容室・サロン",
@@ -40,20 +40,7 @@ const shops = [
     items: [
       { label: "予約管理", desc: "施術者別・ベッド別にスケジュール管理" },
       { label: "顧客管理", desc: "症状・施術記録をデジタルカルテで管理" },
-      { label: "リピート促進", desc: "次回予約をLINEで自動リマインド" },
-    ],
-  },
-  {
-    icon: Stethoscope,
-    type: "クリニック・歯科",
-    color: "text-blue-500",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
-    hover: "hover:border-blue-200 hover:shadow-blue-100",
-    items: [
-      { label: "予約管理", desc: "診察・処置ごとに予約枠を細かく設定" },
-      { label: "顧客管理", desc: "問診票・来院履歴をオンラインで管理" },
-      { label: "リピート促進", desc: "定期検診のご案内を自動送信" },
+      { label: "リピート促進", desc: "次回予約のリマインド通知を自動送信" },
     ],
   },
 ];
@@ -75,8 +62,9 @@ export default function RecommendedFor() {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {shops.map((shop, i) => (
+        {/* メイン3業種 */}
+        <div className="grid sm:grid-cols-3 gap-4 mb-6">
+          {mainShops.map((shop, i) => (
             <motion.div
               key={shop.type}
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +73,6 @@ export default function RecommendedFor() {
               transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
               className={`bg-white rounded-2xl border ${shop.border} p-5 card-shadow transition-all duration-200 ${shop.hover} hover:shadow-lg cursor-default`}
             >
-              {/* Icon */}
               <div className={`w-10 h-10 rounded-xl ${shop.bg} flex items-center justify-center mb-4`}>
                 <shop.icon className={`w-5 h-5 ${shop.color}`} />
               </div>
@@ -101,6 +88,22 @@ export default function RecommendedFor() {
             </motion.div>
           ))}
         </div>
+
+        {/* サブ業種 */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="flex items-center gap-3 bg-white border border-gray-100 rounded-xl px-5 py-3.5 card-shadow"
+        >
+          <Stethoscope className="w-4 h-4 text-blue-400 shrink-0" />
+          <p className="text-xs text-gray-500">
+            <span className="font-semibold text-gray-700">クリニック・歯科医院</span>
+            にも対応しています。予約枠管理・定期検診リマインドなど、
+            医療業種向けの活用イメージは「<a href="#usecases" className="text-orange-500 hover:underline">活用事例</a>」をご覧ください。
+          </p>
+        </motion.div>
       </div>
     </section>
   );

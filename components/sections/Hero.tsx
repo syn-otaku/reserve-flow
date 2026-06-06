@@ -109,11 +109,20 @@ export default function Hero() {
 
           <FadeUp delay={0.3}>
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              <Button size="lg" className="group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-7 h-13 rounded-xl text-base shadow-md hover:shadow-lg hover:shadow-orange-200 transition-all">
+              <Button
+                size="lg"
+                onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+                className="group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-7 h-13 rounded-xl text-base shadow-md hover:shadow-lg hover:shadow-orange-200 transition-all"
+              >
                 14日間無料で試す
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="border-gray-200 bg-white hover:bg-gray-50 text-gray-700 px-7 h-13 rounded-xl text-base transition-all">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+                className="border-gray-200 bg-white hover:bg-gray-50 text-gray-700 px-7 h-13 rounded-xl text-base transition-all"
+              >
                 デモを見る
               </Button>
             </div>

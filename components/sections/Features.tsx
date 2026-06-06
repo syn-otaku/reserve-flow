@@ -5,8 +5,8 @@ import { CalendarDays, Users, Bell, MessageCircle, BarChart2, Store } from "luci
 const features = [
   { icon: CalendarDays, title: "24時間ネット予約",      desc: "お客様がスマホから24時間いつでも予約可能。空き状況がリアルタイムで反映されます。",          color: "text-orange-500", bg: "bg-orange-50", border: "hover:border-orange-200" },
   { icon: Users,        title: "顧客カルテ管理",         desc: "来店履歴・施術内容・アレルギー情報をデジタルで管理。スタッフ全員がどの端末からでも確認できます。", color: "text-blue-500",   bg: "bg-blue-50",   border: "hover:border-blue-200" },
-  { icon: Bell,         title: "自動リマインド通知",      desc: "予約前日・当日にSMS・LINEで自動通知。無断キャンセルを平均68%削減した実績があります。",         color: "text-emerald-500",bg: "bg-emerald-50", border: "hover:border-emerald-200" },
-  { icon: MessageCircle,title: "LINE公式アカウント連携",  desc: "お客様のLINEと連携して、予約確認・リマインド・クーポン配信をLINEで完結。",                 color: "text-green-500",  bg: "bg-green-50",  border: "hover:border-green-200" },
+  { icon: Bell,         title: "自動リマインド通知",      desc: "予約前日・当日にSMS・メールで自動通知。無断キャンセルの削減を想定したUIデモです。",            color: "text-emerald-500",bg: "bg-emerald-50", border: "hover:border-emerald-200" },
+  { icon: MessageCircle,title: "LINE連携（UIデモ）",      desc: "LINE公式アカウントと連携した予約確認・リマインド・クーポン配信のUIイメージです。実API連携は別途開発が必要です。", color: "text-green-500",  bg: "bg-green-50",  border: "hover:border-green-200" },
   { icon: BarChart2,    title: "売上・稼働率レポート",    desc: "予約数・キャンセル率・売上をグラフで可視化。忙しい時間帯や人気メニューがひと目でわかります。",   color: "text-violet-500", bg: "bg-violet-50", border: "hover:border-violet-200" },
   { icon: Store,        title: "複数店舗対応",           desc: "複数の店舗を一括管理。オーナーはどの店舗の状況もスマホひとつで確認できます。",                  color: "text-amber-500",  bg: "bg-amber-50",  border: "hover:border-amber-200" },
 ];

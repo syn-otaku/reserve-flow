@@ -78,7 +78,7 @@ export default function AppPreview() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
             スマホでも、PCでも。<br className="hidden sm:block" />どこからでも管理できます。
           </h2>
-          <p className="text-gray-500 max-w-lg mx-auto">お店にいなくてもリアルタイムで予約確認・顧客対応が可能。LINEリマインドは自動で送られるので、作業は最小限です。</p>
+          <p className="text-gray-500 max-w-lg mx-auto">お店にいなくてもリアルタイムで予約確認・顧客対応が可能。以下はUIデモのイメージです。</p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <motion.div
@@ -92,8 +92,8 @@ export default function AppPreview() {
           >
             <DashboardMock />
             <div className="rounded-2xl bg-orange-50 border border-orange-100 p-5">
-              <p className="text-sm font-bold text-gray-800 mb-1">💬 LINEリマインドが自動送信</p>
-              <p className="text-sm text-gray-500">予約の前日・当日にお客様へLINEで通知が自動送信されます。無断キャンセルが大幅に減り、スタッフの電話対応も不要になります。</p>
+              <p className="text-sm font-bold text-gray-800 mb-1">💬 リマインド通知のUIイメージ</p>
+              <p className="text-sm text-gray-500">予約の前日・当日にSMS・メールで通知するUIデモです。LINE連携は実装イメージであり、実際のAPI連携は別途開発が必要です。</p>
             </div>
           </motion.div>
         </div>
